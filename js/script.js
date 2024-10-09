@@ -6,17 +6,21 @@ function validate()
 	let pass1=document.getElementById("pass1").value;
 	let pass2=document.getElementById("pass2").value;
 	let mob_num=document.getElementById("mob_num").value;
+	let dob=document.getElementById("dob").value;
 	
 
 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 	var phoneno = /^\d{10}$/;
-	
-	
+	var name_pattern=/[^\w\s-]/;
 
 
 	if(uname=="")
 	{
 		document.getElementById("uname_error").innerHTML="Enter the user name";
+	}
+	else if(name_pattern.test(uname)==true)
+	{
+		document.getElementById("uname_error").innerHTML="User name shouldn't contain special characters";
 	}
 	else
 	{
@@ -37,7 +41,8 @@ function validate()
 	{
 		document.getElementById("email_error").innerHTML="";
 	}
-
+	
+	
 	var psw_lower=/[a-z]/;
 	var psw_upper=/[A-Z]/;
 	var psw_digit=/[0-9]/;
@@ -105,6 +110,39 @@ function validate()
 	else 
 	{
 		document.getElementById("mob_num_error").innerHTML="";
+	}
+
+
+	if(document.getElementById("m").checked || document.getElementById("f").checked)
+	{
+		document.getElementById("gen_error").innerHTML="";
+			
+	}
+	else
+	{
+		
+		document.getElementById("gen_error").innerHTML="Select your gender";
+	}
+	
+	if(document.getElementById("fb").checked || document.getElementById("ct").checked)
+	{
+		document.getElementById("sports_error").innerHTML="";
+			
+	}
+	else
+	{
+		
+		document.getElementById("sports_error").innerHTML="Select your favourite sports ";
+	}
+
+	if(dob=="")
+	{
+		document.getElementById("dob_error").innerHTML="Select your dob";
+			
+	}
+	else
+	{
+		document.getElementById("dob_error").innerHTML="";
 	}
 
 	

@@ -6,12 +6,12 @@
 	</head>
 	
 	<body>
-		<main class="pt-5 ">
+		<main class="pt-2 ">
 		
-			<form  class=" w-100 p-5">
+			<form  class=" w-100 py-2 px-5">
 				
 
-				<div class="input-container w-100 h-75 border border-success p-5   d-flex flex-column justify-content-center align-items-center">
+				<div class="input-container w-100  border border-success p-5   d-flex flex-column justify-content-center align-items-center">
 			
 					<div class=" p-2 ">
 						<input  type="text" id="uname"  placeholder="Enter username"><br>
@@ -36,6 +36,25 @@
 					<div class=" p-2  ">
 						<input type="text" id="mob_num" placeholder="Enter mobile number"  onkeypress="myFunction(event)"><br>
 						<span id="mob_num_error" class="text-danger"></span>	
+					</div>
+
+					<div class=" p-2  ">
+						<label>Select your gender</label><br>
+						<label class="me-2">Male</label><input class="gender" type="radio" id="m"  name="gender"><br>
+						<label class="me-2">Female</label><input class="gender"  type="radio" id="f" name="gender" ><br>
+						<span id="gen_error" class="text-danger"></span>	
+					</div>
+
+					<div class=" p-2  ">
+						<label>Interested sports</label><br>
+						<label class="me-2">Football</label><input class="sport" type="checkbox" id="fb" ><br>
+						<label class="me-2">Cricket</label><input class="sport"  type="checkbox" id="ct" ><br>
+						<span id="sports_error" class="text-danger"></span>	
+					</div>
+
+					<div class=" p-2  ">
+						<label class="me-2">DOB</label><input class="dob" type="date" id="dob" ><br>	
+						<span id="dob_error" class="text-danger"></span>
 					</div>
 				
 					<button type="button" onclick="validate()">Submit</button>		
